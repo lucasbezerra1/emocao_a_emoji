@@ -30,8 +30,8 @@ classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models
   
 function speak(){
   var synth = window.speechSynthesis;
-  speak_data_1 = "The first prediction is " + prediction_1;
-  speak_data_2 = "And the second prediction is " + prediction_2;
+  speak_data_1 = "A primeira previsão é " + prediction_1;
+  speak_data_2 = "E a segunda previsão é " + prediction_2;
   var utterThis = new SpeechSynthesisUtterance(speak_data_1 + speak_data_2);
   synth.speak(utterThis);
 }
@@ -54,28 +54,28 @@ function gotResult(error, results) {
     prediction_1 = results[0].label;
     prediction_2 = results[1].label;
     speak();
-    if(results[0].label == "happy")
+    if(results[0].label == "feliz")
     {
 	    document.getElementById("update_emoji").innerHTML = "&#128522;";
     }
-    if(results[0].label == "sad")
+    if(results[0].label == "triste")
     {
 	    document.getElementById("update_emoji").innerHTML = "&#128532;";
     }
-    if(results[0].label == "angry")
+    if(results[0].label == "com raiva")
     {
 	    document.getElementById("update_emoji").innerHTML = "&#128548;";
     }
 
-    if(results[1].label == "happy")
+    if(results[1].label == "feliz")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128522;";
     }
-    if(results[1].label == "sad")
+    if(results[1].label == "triste")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128532;";
     }
-    if(results[1].label == "angry")
+    if(results[1].label == "com raiva")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128548;";
     }
