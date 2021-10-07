@@ -54,28 +54,28 @@ function gotResult(error, results) {
     prediction_1 = results[0].label;
     prediction_2 = results[1].label;
     speak();
-    if(results[0].label == "feliz")
+    if(results[0].label == "happy")
     {
 	    document.getElementById("update_emoji").innerHTML = "&#128522;";
     }
-    if(results[0].label == "triste")
+    if(results[0].label == "sad")
     {
 	    document.getElementById("update_emoji").innerHTML = "&#128532;";
     }
-    if(results[0].label == "com raiva")
+    if(results[0].label == "angry")
     {
 	    document.getElementById("update_emoji").innerHTML = "&#128548;";
     }
 
-    if(results[1].label == "feliz")
+    if(results[1].label == "happy")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128522;";
     }
-    if(results[1].label == "triste")
+    if(results[1].label == "sad")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128532;";
     }
-    if(results[1].label == "com raiva")
+    if(results[1].label == "angry")
     {
 	    document.getElementById("update_emoji2").innerHTML = "&#128548;";
     }
